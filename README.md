@@ -1,20 +1,16 @@
 # relapse
 
-PS5 WebKit + kernel exploit chain (relapse / aio), firmware **7.00 - 13.60**.
+🚨 **NOVO MÉTODO PARA PS5: FIRMWARE 7.00 ATÉ 13.60!**
 
-Retail and testkit build. Devkits want the [relapse-dev](https://github.com/soniciso1/relapse-dev) build instead.
+Saiu uma nova página com a cadeia de exploits WebKit + Kernel do PS5, utilizando o Relapse/AIO. O método tem suporte desde a firmware 7.00 até a 13.60, incluindo várias versões intermediárias.
 
-Open the page on the console and let it run. A successful run draws the payload menu
-in place and sends each ELF through the console'"'"'s own syscalls to `127.0.0.1:9021`,
-so no server-side support is needed and this works from any static host.
+A ideia é simples: você abre a página diretamente no navegador do console e deixa o processo rodar. Se tudo der certo, o menu de payloads aparece na própria tela, e o envio dos arquivos ELF é feito pelo próprio console, sem precisar de um servidor externo para executar essa parte.
 
-Supported: 7.00, 7.01, 7.20, 7.40, 7.60, 7.61, 8.00, 8.20, 8.40, 8.60, 9.00, 9.20,
-9.40, 9.60, 10.00, 10.01, 10.20, 10.40, 11.00, 11.20, 11.60, 12.00, 12.02, 12.20,
-12.40, 12.60, 12.70, 13.00, 13.20, 13.40, 13.42, 13.60.
+⚠️ **Atenção:** as firmwares 10.60 e 11.40 ficaram de fora porque faltam módulos necessários para obter os offsets usados pelo exploit.
 
-10.60 and 11.40 are absent: those firmware images are missing the modules the offsets
-have to be read out of.
+O suporte inclui consoles Retail e Testkit. Já quem utiliza Devkit precisa da versão específica chamada **Relapse-Dev**.
 
-`elf.html` is a standalone payload menu for the already-jailbroken case. It needs a
-host that runs code and can reach the console (`api/` ships PHP and node handlers),
-so it does not work on GitHub Pages - use the run page'"'"'s own menu there.
+Outro detalhe: o arquivo `elf.html` é um menu separado para consoles que já estão desbloqueados e precisa de um servidor compatível com execução de código e acesso ao console. Portanto, não funciona no GitHub Pages.
+
+É mais uma novidade importante para a cena do PS5. Quem está em firmware compatível já tem motivo para acompanhar de perto o trabalho dos desenvolvedores. 🎮
+
