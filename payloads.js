@@ -12,7 +12,7 @@ window.PAYLOAD_TILES = [
     {"title": "kstuff-lite", "description": "Lite version of kstuff. Version v1.11", "name": "kstuff-lite_v1.11.elf", "info": "kstuff-lite_v1.11.elf - EchoStretch", "key": "kstuff-lite"},
     {"title": "Lapy-JB-Daemon", "description": "Standalone homebrew jailbreak daemon for PS5. Version v1.2", "name": "Lapy-JB-Daemon_v1.2.elf", "info": "Lapy-JB-Daemon_v1.2.elf - Lapy", "key": "lapy-jb-daemon"},
     {"title": "PKG-Manager", "description": "Browse and install PKGs from USB, disc, or SMB shares directly on your PS5. Version v1.4.1", "name": "PKG-Manager_v1.4.1.elf", "info": "PKG-Manager_v1.4.1.elf - itsPLK", "key": "pkg-manager"},
-    {"title": "pldmgr", "description": "Modern web dashboard to manage, import, and automatically load payloads on your PS5. Version v0.5.2", "name": "pldmgr_v0.5.2.elf", "info": "pldmgr_v0.5.2.elf - itsPLK", "key": "pldmgr"},
+    {"title": "(SUPER RECOMENDO)payload Manager", "description": "Modern web dashboard to manage, import, and automatically load payloads on your PS5. Version v0.5.2", "name": "pldmgr_v0.5.2.elf", "info": "pldmgr_v0.5.2.elf - itsPLK", "key": "pldmgr"},
     {"title": "ps5-app-dumper", "description": "Dumps PS5 application files from pfsmnt to a connected USB storage device. Version v2.00", "name": "ps5-app-dumper_v2.00.elf", "info": "ps5-app-dumper_v2.00.elf - EchoStretch", "key": "ps5-app-dumper"},
     {"title": "ShadowMountPlus", "description": "Fully automated background Auto-Mounter for jailbroken PS5 consoles. Version 1.7beta2", "name": "ShadowMountPlus_1.7beta2.elf", "info": "ShadowMountPlus_1.7beta2.elf - drakmor", "key": "shadowmountplus"}
 ];
