@@ -1,67 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>NADA REPUBLICANO - EXPLOSÃO DO GAME</title>
+<title>NADA REPUBLICANO</title>
 <link rel="stylesheet" href="main.css?v=final">
 <style>
+* { box-sizing: border-box; }
 body {
-  background: radial-gradient(circle at 50% 25%, #26120a 0, #120800 45%, #000000 100%) !important;
-  color: #ffd700 !important;
+  background: #0b0b0d !important;
+  background-image: radial-gradient(ellipse 90% 55% at 50% -10%, rgba(255,110,0,.22) 0, rgba(255,110,0,0) 60%) !important;
+  color: #e8e4dd !important;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: .2px;
 }
 h1 {
-  color: #ffd700 !important;
-  text-shadow: 2px 2px 0 #000, 0 0 18px rgba(255,140,0,.55);
-  letter-spacing: 1px;
+  color: #f5f0e8 !important;
+  font-weight: 700 !important;
+  font-size: 1.9em !important;
+  letter-spacing: 4px !important;
   text-transform: uppercase;
+  margin-bottom: 2px !important;
 }
 .header-sub {
-  color: #ff8c00 !important;
-  font-weight: bold;
+  color: #ff7a1a !important;
+  font-size: .8em !important;
+  font-weight: 600;
+  letter-spacing: 6px !important;
   text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 0.85em;
-  text-shadow: 1px 1px 0 #000;
-  margin-top: -6px;
+  margin: 0 0 10px 0 !important;
+}
+.top-status {
+  display: inline-block;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 30px;
+  padding: 5px 16px;
+  font-size: .85em;
+  color: #b8b2a8 !important;
+}
+.top-status .fw-bold { color: #f5f0e8 !important; }
+.led {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+  background: #6b6b6b; margin-right: 7px; vertical-align: middle;
+}
+.led.on { background: #ff7a1a; box-shadow: 0 0 6px rgba(255,122,26,.8); }
+.fw-line {
+  color: #8a857c !important; font-size: .82em !important;
+  letter-spacing: 1px; margin: 8px 0 0 0 !important;
+}
+.card {
+  max-width: 520px; margin: 22px auto 0 auto;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 26px 22px;
 }
 .btn {
-  background: #1a0d00 !important;
-  border: 2px solid #ff8c00 !important;
-  color: #ffd700 !important;
+  display: block;
+  width: 100%;
+  margin: 0 0 12px 0;
+  padding: 15px 20px !important;
+  background: linear-gradient(180deg, #ff8c1a 0%, #e35d00 100%) !important;
+  border: none !important;
+  border-radius: 10px;
+  color: #14100b !important;
+  font-weight: 700 !important;
+  font-size: 1em !important;
+  letter-spacing: 2px !important;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 0 10px rgba(255,140,0,.35);
+  box-shadow: 0 6px 18px rgba(227,93,0,.28), inset 0 1px 0 rgba(255,255,255,.25);
 }
-.btn:hover, .btn:focus {
-  border-color: #ffd700 !important;
-  box-shadow: 0 0 18px rgba(255,69,0,.6);
+.btn:last-child { margin-bottom: 0; }
+.btn:focus { box-shadow: 0 6px 22px rgba(255,122,26,.55), inset 0 1px 0 rgba(255,255,255,.25); }
+.btn.btn-ghost {
+  background: rgba(255,255,255,.05) !important;
+  color: #e8e4dd !important;
+  border: 1px solid rgba(255,122,26,.5) !important;
+  box-shadow: none;
 }
-.text-secondary { color: #ff8c00 !important; }
-#top-bar-text { color: #ff8c00 !important; }
-.btn-row { display: flex; flex-direction: column; gap: 10px; align-items: center; padding: 8px 0; }
-.btn-row .btn { display: block; width: 70%; max-width: 420px; text-align: center; padding: 12px 16px; }
+.btn.btn-ghost:focus { background: rgba(255,122,26,.14) !important; }
+.btn-disabled { opacity: .35; }
+.credits {
+  max-width: 520px; margin: 26px auto 0 auto;
+  color: #6f6a62 !important; font-size: .78em !important;
+  line-height: 1.6; text-align: center;
+}
+.credits b { color: #9a948a !important; letter-spacing: 2px; text-transform: uppercase; }
 </style>
 </head>
 <body>
-<div class="p-2">
+<div class="p-2" style="text-align:center; padding-top:26px;">
 <h1 class="text-center">Nada Republicano</h1>
-<p class="text-center header-sub">Explosão do Game</p>
-<p class="text-center" id="top-bar-text">Firmware atual: <span class="fw-bold" id="current-fw">Desconhecido</span></p>
-<p class="text-center text-secondary">POOPS: 7.00-12.00 | P2JB: 12.02-12.70 | RELAPSE: 13.00-13.60</p>
+<p class="header-sub">Explosão do Game</p>
+<p><span class="top-status"><span class="led" id="fw-led"></span>Firmware: <span class="fw-bold" id="current-fw">—</span></span></p>
+<p class="fw-line">7.00–12.00 · Poops&ensp;|&ensp;12.02–12.70 · P2JB&ensp;|&ensp;13.00–13.60 · Relapse</p>
 </div>
 <div id="main-content">
 <div id="pre-jb-view" class="selected">
-<div class="btn-row">
+<div class="card">
 <a tabindex="0" class="btn fw-bold" id="run-jb">Jailbreak</a>
-<a tabindex="0" class="btn fw-bold" id="open-payloads" href="https://vinasxexplosao.github.io/relapsenadarepublicano/relapse.html?senderok=1">Cargas (Payloads)</a>
-</div>
+<a tabindex="0" class="btn fw-bold btn-ghost" id="open-payloads" href="https://vinasxexplosao.github.io/relapsenadarepublicano/relapse.html?senderok=1">Cargas · Payloads</a>
 <p id="fw-status" hidden></p>
 </div>
 </div>
-<div class="position-relative text-center p-2 mb-2">
-<p class="text-secondary">Créditos</p>
-<p class="text-secondary mt-2">Jordy, Egy, small dog, dr b, Zeco, Gezine, Echostretch, Ufm42, TheFloW, John Tornblom, Flatz, Idlesauce and PS5 R&amp;D Discord.</p>
+</div>
+<div class="credits">
+<b>Créditos</b><br>
+Jordy, Egy, small dog, dr b, Zeco, Gezine, Echostretch, Ufm42, TheFloW, John Tornblom, Flatz, Idlesauce e PS5 R&amp;D Discord.
 </div>
 <script>
 try {
@@ -79,12 +126,8 @@ var POOPS_FIRMWARES = [
   "10.00", "10.01", "10.20", "10.40", "10.60",
   "11.00", "11.20", "11.40", "11.60", "12.00"
 ];
-var P2JB_FIRMWARES = [
-  "12.02", "12.20", "12.40", "12.60", "12.70"
-];
-var RELAPSE_FIRMWARES = [
-  "13.00", "13.20", "13.40", "13.42", "13.60"
-];
+var P2JB_FIRMWARES = [ "12.02", "12.20", "12.40", "12.60", "12.70" ];
+var RELAPSE_FIRMWARES = [ "13.00", "13.20", "13.40", "13.42", "13.60" ];
 var ua = navigator.userAgent;
 var fwStr = "";
 var marker = "PlayStation 5/";
@@ -93,7 +136,9 @@ if (idx >= 0) {
   fwStr = ua.substring(idx + marker.length).split(" ")[0].split(";")[0].split(")")[0];
 }
 var el = document.getElementById("current-fw");
-el.textContent = fwStr || "Nao detectado";
+el.textContent = fwStr || "não detectado";
+var led = document.getElementById("fw-led");
+if (fwStr) led.className = "led on";
 var jbButton = document.getElementById("run-jb");
 var fwStatus = document.getElementById("fw-status");
 var href = "";
@@ -107,9 +152,9 @@ if (href) {
   jbButton.classList.add("btn-disabled");
   jbButton.setAttribute("aria-disabled", "true");
   fwStatus.hidden = false;
-  fwStatus.textContent = "Firmware nao suportado"
+  fwStatus.textContent = "Firmware não suportado"
   + (fwStr ? ": " + fwStr : "")
-  + ". Suportados: 7.00-12.00 (Poopsploit), 12.02-12.70 (P2JB), 13.00-13.60 (Relapse).";
+  + ". Suportados: 7.00–12.00, 12.02–12.70, 13.00–13.60.";
 }
 } catch (e) { }
 </script>
