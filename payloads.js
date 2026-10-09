@@ -17,7 +17,7 @@ window.PAYLOAD_TILES = [
     {"title": "ShadowMountPlus", "description": "Fully automated background Auto-Mounter for jailbroken PS5 consoles. Version 1.7beta2", "name": "ShadowMountPlus_1.7beta2.elf", "info": "ShadowMountPlus_1.7beta2.elf - drakmor", "key": "shadowmountplus"}
     {"title": "ShadowMountPlus", "description": "Fully automated background Auto-Mounter for jailbroken PS5 consoles. Version 1.7beta2", "name": "ShadowMountPlus_1.7beta2.elf", "info": "ShadowMountPlus_1.7beta2.elf - drakmor", "key": "shadowmountplus"},
 {"title": "(ULTRA RECOMENDADO)Prospero Manager", "description": "Gerenciador all-in-one de homebrew: administra o PS5 pelo navegador do celular ou PC. Web-based, sem cliente no computador.", "name": "ProsperoMgr.elf", "info": "ProsperoMgr.elf - notmaj0r", "key": "prospero-mgr"},
-{"title": "EMULADOR DE PS2 (NECESSÁRIO BIOS)", "description": "Instala o emulador de PS2 nativo (port do PCSX2) com Vulkan, até 6x de resolução/4K, widescreen e patches de 60 FPS. BIOS e jogos por conta do usuário.", "name": "PS5SX2Installer.elf", "info": "PS5SX2Installer.elf - Sword", "key": "ps5sx2"}
+{"title": "EMULADOR DE PS2", "description": "Instala o emulador de PS2 nativo (port do PCSX2) com Vulkan, até 6x de resolução/4K, widescreen e patches de 60 FPS. BIOS e jogos por conta do usuário.", "name": "PS5SX2Installer.elf", "info": "PS5SX2Installer.elf - Sword", "key": "ps5sx2"}
 ];
-];
+
 window.PAYLOAD_ART = { dir: "ui/", pfx: "btn-", on: true };
